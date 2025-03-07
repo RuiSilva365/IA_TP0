@@ -1,5 +1,4 @@
-import heapq
-from metrics import measure_performance
+import heapq, time
 
 class AStarImproved:
     def __init__(self, graph, start, goal):
@@ -22,6 +21,7 @@ class AStarImproved:
         visited_nodes = []
 
         while open_list:
+            time.sleep(0.0001) 
             _, current = heapq.heappop(open_list)
 
             if current == self.goal:

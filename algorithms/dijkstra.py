@@ -1,5 +1,4 @@
-import heapq
-from metrics import measure_performance
+import heapq, time
 
 
 class Dijkstra:
@@ -17,6 +16,7 @@ class Dijkstra:
         visited_nodes = []
 
         while open_list:
+            time.sleep(0.0001)  # Adiciona um pequeno atraso de 0.1ms           
             cost, current = heapq.heappop(open_list)
             
             if current == self.goal:
